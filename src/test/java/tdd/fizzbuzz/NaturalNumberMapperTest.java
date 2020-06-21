@@ -19,7 +19,7 @@ public class NaturalNumberMapperTest {
     }
 
     @Test
-    void whenNotNaturalNumber_thenAssertionSucceeds() {
+    public void whenNotNaturalNumber_thenAssertionSucceeds() {
 
         NaturalNumberMapper nnm = new NaturalNumberMapper();
         assertThrows(NotNaturalNumberInputException.class, () -> {
@@ -28,7 +28,7 @@ public class NaturalNumberMapperTest {
     }
 
     @Test
-    void whenNotNaturalNumber1_thenAssertionSucceeds() {
+    public void whenNotNaturalNumber1_thenAssertionSucceeds() {
 
         NaturalNumberMapper nnm = new NaturalNumberMapper();
         assertThrows(NotNaturalNumberInputException.class, () -> {
