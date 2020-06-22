@@ -6,18 +6,21 @@ package tdd.fizzbuzz;
  */
 public class MultiNaturalNumberMapper {
 
-    public void multiMap(Integer number) {
+    public String multiMap(Integer number) {
 
         NaturalNumberMapper naturalNumberMapper = new NaturalNumberMapper();
 
         Integer n = 1;
+        String result;
+        String resultInc = "";
         System.out.println("");
         while (n < number) {
-            String result = naturalNumberMapper.map(n);
-            System.err.print(result + ",");
+            result = naturalNumberMapper.map(n);
+            resultInc = resultInc + result + ",";
             n++;
         }
-
-        System.out.print(naturalNumberMapper.map(number));
+        resultInc = resultInc + naturalNumberMapper.map(number);
+        System.out.print(resultInc);
+        return resultInc;
     }
 }
